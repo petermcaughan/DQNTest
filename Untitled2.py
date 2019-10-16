@@ -5,10 +5,10 @@
 
 
 import os
+os.system("python -m pip install -r requirements.txt")
 import sys
 from PIL import Image
 from tqdm import tqdm
-import cv2
 
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Conv2D, MaxPooling2D, Activation, Flatten
