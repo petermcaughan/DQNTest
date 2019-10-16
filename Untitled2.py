@@ -350,13 +350,14 @@ if not os.path.isdir('models'):
 agent = DQNAgent()
 
 for episode in tqdm(range(1, EPISODES+1), ascii=True, unit="episode"):
-    print("Episode: ", step)
+  
     agent.tensorboard.step = episode
     
     episode_reward = 0
     step = 1
     current_state = env.reset()
     done = False
+    print("Episode: ", step)
     
     while not done:
         if np.random.random() > epsilon:
